@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<style>
+  /* تنسيق شريط القائمة الرئيسي */
+  .navbar {
+    list-style: none;
+    background-color:cadetblue;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-family: Arial, sans-serif;
+   align-items: center;
+   height: 40px;
+  }
+
+  .navbar > li {
+    position: relative; /* ضروري لتحديد مكان القائمة الفرعية أسفله */
+  }
+
+  .navbar a {
+    display: block;
+    color:antiquewhite;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+
+  .navbar a:hover {
+    background-color:darkcyan;
+  }
+
+  /* تنسيق القائمة الفرعية وإخفاؤها افتراضياً */
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0; /* محاذاة لليمين لتناسب اللغة العربية */
+    background-color:cadetblue;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  
+  }
+
+  .submenu li a {
+    padding: 14px 16px;
+  
+  }
+
+  /* إظهار القائمة الفرعية عند تمرير المؤشر */
+  .dropdown:hover .submenu {
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+  <ul class="navbar">
+    <li><a href="#">الرئيسية</a></li>
+    
+    <!-- العنصر الذي يحتوي على قائمة فرعية -->
+    <li class="dropdown">
+      <a href="#">الخدمات ▾</a>
+      <ul class="submenu">
+        <li><a href="#">تصميم المواقع</a></li>
+        <li><a href="#">برمجة التطبيقات</a></li>
+        <li><a href="#">التسويق الرقمي</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">من نحن</a></li>
+    <li><a href="#">تواصل معنا</a></li>
+  </ul>
+
+</body>
+</html>
